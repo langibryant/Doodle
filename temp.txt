@@ -1,0 +1,8 @@
+game
+    UI (spritesheet)
+        menu
+        button
+    Entities (UI, spritesheet)
+        namespace factory
+            machines (MK1 Miner, Constructor, Assembler)
+            belts
