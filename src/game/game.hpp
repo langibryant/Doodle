@@ -14,8 +14,6 @@ namespace herbglitch {
         void render();
 
     private:
-        void gridInit();
-
         void background();
 
         SDL_Texture *spritesheet;
@@ -24,5 +22,8 @@ namespace herbglitch {
         entities::Handler *entityHandler;
 
         ge::resource::Sprite *grid;
+
+        SDL_Point offset;
+        SDL_Point loopSize;
     };
 }

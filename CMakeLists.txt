@@ -5,7 +5,6 @@ project(satisfactory_tools)
 add_executable(${PROJECT_NAME}
     src/main.cpp
     src/game/ui/handler.cpp
-    src/game/ui/selector.cpp
     src/game/entities/handler.cpp
     src/game/game.cpp
 )
