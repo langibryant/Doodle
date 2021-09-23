@@ -23,5 +23,4 @@ This tool is meant to be similar to [SaLT by AutumnFallStudios](https://autumnfa
     * This may take a bit, but you shouldn't have to run it again
 * press [f7]
 * in the vscode terminal you can now run the project by Running ```build\satisfactory_tools.exe```
-    * this currently throws an error on close, that will be fixed soon
 

@@ -14,9 +14,15 @@ namespace herbglitch {
         void render();
 
     private:
+        void gridInit();
+
+        void background();
+
         SDL_Texture *spritesheet;
 
         ui::Handler *uiHandler;
         entities::Handler *entityHandler;
+
+        ge::resource::Sprite *grid;
     };
 }
