@@ -44,4 +44,10 @@ target_link_directories(${PROJECT_NAME}
     PRIVATE external/ge
 )
 
-target_link_libraries(${PROJECT_NAME} mingw32 SDL2main SDL2 SDL2_image)
+file(COPY res DESTINATION ${CMAKE_BINARY_DIR})
+
+if (MSVC)
+    target_link_libraries(${PROJECT_NAME} SDL2main SDL2 SDL2_image)
+else (MSVC)
+    target_link_libraries(${PROJECT_NAME} mingw32 SDL2main SDL2 SDL2_image)
+endif (MSVC)
