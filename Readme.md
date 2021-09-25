@@ -8,7 +8,7 @@ This tool is meant to be similar to [SaLT by AutumnFallStudios](https://autumnfa
     * direct link to the installer [MinGW-w64 installer](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download)
     * These are the options that are used
     * ![MinGW-w64 Settings](https://i.imgur.com/i9bkmbu.png)
-    * **Make sure to add to path**
+    * **Make sure to add to path** [How to add to path](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/)
 
 * Install CMake
     * [CMake Download Page](https://cmake.org/download/)
