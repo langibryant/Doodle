@@ -1,6 +1,6 @@
 #include "handler.hpp"
 
-namespace herbglitch {
+namespace satisfactoryTool {
     namespace entities {
         Handler::Handler(ge::Data *data, SDL_Texture *spritesheet, ui::Handler *uiHandler): data(data), uiHandler(uiHandler){
         }

@@ -3,7 +3,7 @@
 // #include "entity.hpp"
 #include "../ui/handler.hpp"
 
-namespace herbglitch {
+namespace satisfactoryTool {
     namespace entities {
         class Handler {
         public:

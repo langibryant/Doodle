@@ -2,7 +2,7 @@
 
 #include <ge.hpp>
 
-namespace herbglitch {
+namespace satisfactoryTool {
     namespace ui {
         class Handler {
         public:

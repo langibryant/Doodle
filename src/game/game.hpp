@@ -1,10 +1,9 @@
 #pragma once
 #include <ge.hpp>
-#include "../DEFINITIONS.hpp"
 #include "ui/handler.hpp"
 #include "entities/handler.hpp"
 
-namespace herbglitch {
+namespace satisfactoryTool {
     class Game : public ge::Object {
     public:
         Game(ge::Data *data);
