@@ -4,7 +4,7 @@
 	ignore = dirty
 [submodule "external/ge"]
 	path = external/ge
-	url = https://github.com/herbglitchYT/SDL2_GE_00.git
+	url = git@github.com:herbglitchYT/SDL2_GE_00.git
 [submodule "external/sdl_image"]
 	path = external/sdl_image
 	url = https://github.com/libsdl-org/SDL_image.git
