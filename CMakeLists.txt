@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
+set(SUPPORT_JPG OFF)
+
 project(satisfactory_tools)
 
 add_executable(${PROJECT_NAME}
@@ -32,8 +34,8 @@ target_link_directories(${PROJECT_NAME}
 
 file(COPY res DESTINATION ${CMAKE_BINARY_DIR})
 
-if (MSVC)
-    target_link_libraries(${PROJECT_NAME} SDL2main SDL2 SDL2_image)
-else (MSVC)
-    target_link_libraries(${PROJECT_NAME} -fPIC mingw32 SDL2main SDL2 SDL2_image)
-endif (MSVC)
+if(WIN32 AND NOT MSVC)
+    target_link_libraries(${PROJECT_NAME} mingw32 SDL2main SDL2 SDL2_image)
+else()
+    target_link_libraries(${PROJECT_NAME} -fPIC SDL2main SDL2 SDL2_image)
+endif()
