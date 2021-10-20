@@ -2,8 +2,8 @@
 
 namespace satisfactoryTool {
     Game::Game(ge::Data *data): ge::Object(data){
-        data->config.load("./res/config/defaults.config");
-        data->config.setGroup("");
+        data->config += "./res/config/defaults.config";
+        data->config = "game";
 
         uiHandler = new ui::Handler(data);
         entityHandler = new entities::Handler(data, spritesheet, uiHandler);
@@ -26,7 +26,6 @@ namespace satisfactoryTool {
     }
 
     Game::~Game(){
-        // SDL_DestroyTexture(spritesheet); //TODO: Figure out if this causes a memory leak
         delete uiHandler;
         delete entityHandler;
         delete grid;
