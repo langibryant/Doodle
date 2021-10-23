@@ -5,20 +5,20 @@ set(SUPPORT_JPG OFF)
 project(satisfactory_tools)
 
 add_executable(${PROJECT_NAME}
-    src/main.cpp
-    src/game/game.cpp
+    src/app.cpp
 
-    src/game/entities/handler.cpp
-    src/game/entities/production.cpp
+    src/entities/handler.cpp
+    src/entities/production.cpp
 
-    src/game/ui/handler.cpp
+    src/ui/handler.cpp
 )
 
-set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
-set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 add_subdirectory(external/sdl)
 add_subdirectory(external/sdl_image)
+add_subdirectory(external/ge)
 
 target_include_directories(${PROJECT_NAME}
     PUBLIC external/sdl/include
@@ -29,13 +29,13 @@ target_include_directories(${PROJECT_NAME}
 target_link_directories(${PROJECT_NAME}
     PUBLIC external/sdl
     PUBLIC external/sdl_image
-    PRIVATE external/ge
+    PUBLIC external/ge
 )
 
 file(COPY res DESTINATION ${CMAKE_BINARY_DIR})
 
 if(WIN32 AND NOT MSVC)
-    target_link_libraries(${PROJECT_NAME} mingw32 SDL2main SDL2 SDL2_image)
+    target_link_libraries(${PROJECT_NAME} mingw32 SDL2main SDL2 SDL2_image ge)
 else()
-    target_link_libraries(${PROJECT_NAME} SDL2main SDL2 SDL2_image)
+    target_link_libraries(${PROJECT_NAME} SDL2main SDL2 SDL2_image ge)
 endif()
