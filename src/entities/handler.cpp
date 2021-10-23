@@ -2,7 +2,7 @@
 
 namespace satisfactoryTool {
     namespace entities {
-        Handler::Handler(ge::Data *data, SDL_Texture *spritesheet, ui::Handler *uiHandler): data(data), uiHandler(uiHandler){
+        Handler::Handler(SDL_Texture *spritesheet, ui::Handler *uiHandler): uiHandler(uiHandler){
         }
 
         Handler::~Handler(){}

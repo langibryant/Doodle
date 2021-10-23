@@ -7,7 +7,7 @@ namespace satisfactoryTool {
     namespace entities {
         class Handler {
         public:
-            Handler(ge::Data *data, SDL_Texture *spritesheet, ui::Handler *uiHandler);
+            Handler(SDL_Texture *spritesheet, ui::Handler *uiHandler);
             ~Handler();
 
             void update();
@@ -15,7 +15,6 @@ namespace satisfactoryTool {
         private:
             void checkSlect();
 
-            ge::Data *data;
             ui::Handler *uiHandler;
         };
     }

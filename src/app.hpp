@@ -6,7 +6,7 @@
 namespace satisfactoryTool {
     class App : public ge::Object {
     public:
-        App(ge::Data *data);
+        App();
         ~App();
 
         void update();

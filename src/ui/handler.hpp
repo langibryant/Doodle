@@ -6,14 +6,11 @@ namespace satisfactoryTool {
     namespace ui {
         class Handler {
         public:
-            Handler(ge::Data *data);
+            Handler();
             ~Handler();
 
             void update();
             void render();
-
-        private:
-            ge::Data *data;
         };
     }
 }

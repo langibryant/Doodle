@@ -5,11 +5,11 @@
 namespace satisfactoryTool {
     class Entity : public ge::Object {
     public:
-        Entity(ge::Data *data): ge::Object(data, 1), select(false){}
+        Entity(): ge::Object(1), select(false){}
         virtual ~Entity(){ delete sprite; }
 
         virtual void update() = 0;
-        virtual void render(){ sprite->draw(data->renderer); }
+        virtual void render(){ sprite->draw(ge::data->renderer); }
 
         void setSelect(bool select = true){ this->select = select; }
 

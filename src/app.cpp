@@ -3,28 +3,28 @@
 GE_MAIN(satisfactoryTool::App, 1920, 1080, "Satisfactory Tools");
 
 namespace satisfactoryTool {
-    App::App(ge::Data *data): ge::Object(data){
-        data->config.load("./res/config/defaults.config");
-        data->config.setGroup("");
+    App::App(){
+        ge::data->config.load("./res/config/defaults.config");
+        ge::data->config.setGroup("");
 
-        uiHandler = new ui::Handler(data);
-        entityHandler = new entities::Handler(data, spritesheet, uiHandler);
+        uiHandler = new ui::Handler();
+        entityHandler = new entities::Handler(spritesheet, uiHandler);
 
         SDL_Rect gridBounds;
         int scale;
 
-        data->config.get(GE_VAR_STR(spritesheet));
-        data->config.get(GE_VAR_STR(gridBounds));
-        data->config.get(GE_VAR_STR(scale));
+        ge::data->config.get(GE_VAR_STR(spritesheet));
+        ge::data->config.get(GE_VAR_STR(gridBounds));
+        ge::data->config.get(GE_VAR_STR(scale));
 
         grid = new ge::Sprite(spritesheet, gridBounds, { 0, 0 });
         grid->setScale(scale);
 
-        offset.x = -(grid->getPos().w - ((data->windowSize.w % grid->getPos().w) / 2));
-        offset.y = -(grid->getPos().h - ((data->windowSize.h % grid->getPos().h) / 2));
+        offset.x = -(grid->getPos().w - ((ge::data->windowSize.w % grid->getPos().w) / 2));
+        offset.y = -(grid->getPos().h - ((ge::data->windowSize.h % grid->getPos().h) / 2));
 
-        loopSize.x = (data->windowSize.w / grid->getPos().w) + 2;
-        loopSize.y = (data->windowSize.h / grid->getPos().h) + 2;
+        loopSize.x = (ge::data->windowSize.w / grid->getPos().w) + 2;
+        loopSize.y = (ge::data->windowSize.h / grid->getPos().h) + 2;
     }
 
     App::~App(){
@@ -52,7 +52,7 @@ namespace satisfactoryTool {
                 gridPos.x = (x * gridPos.w) + offset.x;
                 gridPos.y = (y * gridPos.h) + offset.y;
 
-                SDL_RenderCopy(data->renderer, spritesheet, &grid->getBounds(), &gridPos);
+                SDL_RenderCopy(ge::data->renderer, spritesheet, &grid->getBounds(), &gridPos);
             }
         }
     }
