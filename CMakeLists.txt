@@ -2,15 +2,22 @@ cmake_minimum_required(VERSION 3.10)
 
 set(SUPPORT_JPG OFF)
 
-project(satisfactory_tools)
+project(doodle)
 
 add_executable(${PROJECT_NAME}
-    src/app.cpp
+    src/main.cpp
+    
+    src/menu/menu.cpp
 
-    src/entities/handler.cpp
-    src/entities/production.cpp
+    src/game/game.cpp
 
-    src/ui/handler.cpp
+    src/game/handler/handler.cpp
+
+    src/game/platform/platform.cpp
+
+    src/game/player/player.cpp
+
+    src/over/over.cpp
 )
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
