@@ -1,0 +1,52 @@
+key::ESC -> quit
+
+Menu
+    button -> from sprite sheet
+        Play -> changes state to game state
+        Exit -> quit
+
+    background -> picture of sexy bob
+
+
+Game
+    handler
+        platform
+            sprite -> from sprite sheet
+            is_moving -> self.position ++;
+
+        player
+            sprite -> from sprite sheet
+            gravity
+            key input
+            jump
+
+        check collision
+            player against list of platform
+
+        move platform
+            if player jumps of new platform that is higher Y coord than the last && player velocity is moving him up
+                ->set platforms to moving
+                score++;
+
+
+Game Over
+    button -> from sprite sheet
+        Restart -> delete old game state && changes state to new game state
+        Exit -> quit
+
+    background -> frozen state of Game
+
+
+
+TODO:
+    Score
+
+    right facing
+
+    more challenging
+        less platforms
+        different types of platforms
+        enemies -> shooting????
+
+Extra:
+    

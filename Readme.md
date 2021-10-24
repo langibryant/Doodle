@@ -1,6 +1,6 @@
-# Satisfactory Tool
+# Doodle
 ## Description
-This tool is meant to be similar to [SaLT by AutumnFallStudios](https://autumnfallstudios.itch.io/salt) in the way that you can build out your factory like a blueprint. There will be the added functionality of being able to setup your building system to be similar to how it is in satisfactory (the hud, rotating with middle mouse, setting tools into the slots by pressing numbers, etc...).
+Bunny Senpai go boing
 
 ## Setup
 * mingw-w64
@@ -16,6 +16,7 @@ This tool is meant to be similar to [SaLT by AutumnFallStudios](https://autumnfa
 * In vscode install CMake Tools
     * ![CMake Tools](https://i.imgur.com/QFazixd.png)
 
+* in vscode terminal, run ```git submodule update --init --recursive```
 * in vscode, Run ```CMake: CMake Scan for Kits```
 * in vscode, Run ```CMake: Select a Kit```
     * select ```GCC [version] i686-w64-mingw32```

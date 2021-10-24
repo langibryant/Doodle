@@ -1,29 +1,17 @@
 #pragma once
 #include <ge.hpp>
-#include "../DEFINITIONS.hpp"
-#include "ui/handler.hpp"
-#include "entities/handler.hpp"
+#include "handler/handler.hpp"
 
-namespace herbglitch {
+namespace doodle {
     class Game : public ge::Object {
-    public:
-        Game(ge::Data *data);
-        ~Game();
+        public:
+            Game();
+            ~Game();
 
-        void update();
-        void render();
+            void update();
+            void render();
 
-    private:
-        void background();
-
-        SDL_Texture *spritesheet;
-
-        ui::Handler *uiHandler;
-        entities::Handler *entityHandler;
-
-        ge::resource::Sprite *grid;
-
-        SDL_Point offset;
-        SDL_Point loopSize;
+        private:
+            Handler handler;
     };
 }
